@@ -372,7 +372,9 @@ public class OrderService {
                     response.id(),
                     OrderStatus.WAITING
             );
-
+            /*
+             * 멱등키-주문정보 정보 관리
+             * */
             memoryDbStore.completeRequest(
                     idempotencyKey,
                     response.id()
