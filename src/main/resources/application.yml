@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+spring:
+  application:
+      name: yjy-order-system
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+    datasource:
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:~/test
+      username: sa
+      password:
+
+  jpa:
+    properties:
+      hibernate:
+        default_batch_fetch_size: 100
+
+  jms:
+    listener:
+      session:
+        transacted: true
